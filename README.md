@@ -1,4 +1,4 @@
-# mapillary
+# Mapillary Feed
 
 Simple TweetDeck-style feed viewer from Mapillary API
 

@@ -6,7 +6,10 @@
       <button type="button" ng-click="removeColumn({user: user})" class="close" ><span>&times;</span></button>
     </div>
     <div class="sortButton">
-      <a type="button" ng-click="sort()"> <i class="glyphicon glyphicon-sort-by-attributes"></i> </a>
+      <a type="button" ng-click="reverseSort()">
+        <i class="glyphicon glyphicon-sort-by-attributes" ng-show="orderBy==='updated_at'"></i>
+        <i class="glyphicon glyphicon-sort-by-attributes-alt" ng-hide="orderBy==='updated_at'"></i>
+      </a>
     </div>
   </header>
 
@@ -17,7 +20,7 @@
       <h4>No activity in this feed</h4>
     </div>
 
-    <div ng-repeat="entry in data">
+    <div ng-repeat="entry in data | orderBy: orderBy">
 
       <mecommentedonimage ng-if="entry.action=='mecommentedonimage'" data="entry"></mecommentedonimage>
 

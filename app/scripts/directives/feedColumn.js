@@ -20,6 +20,11 @@ angular.module('mapillaryApp')
       },
       controller: function($scope, feedAPI) {
         $scope.feedData = [];
+        $scope.orderBy = 'updated_at';
+
+        $scope.reverseSort = function() {
+          $scope.orderBy = $scope.orderBy === 'updated_at' ? '-updated_at' : 'updated_at';
+        };
 
         var promise = null;
         if ($scope.user) {
