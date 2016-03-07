@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name mapillaryApp.directive:mecommentedonimage
- * @description
- * # mecommentedonimage
- */
 angular.module('mapillaryApp')
   .directive('mecommentedonimage', function () {
     return {

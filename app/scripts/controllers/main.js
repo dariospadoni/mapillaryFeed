@@ -1,12 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name mapillaryApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the mapillaryApp
- */
 angular.module('mapillaryApp')
   .controller('MainCtrl', function ($localStorage) {
     var vm = this;

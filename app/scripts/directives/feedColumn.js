@@ -15,7 +15,7 @@ angular.module('mapillaryApp')
       scope: {
         title: '@',
         user: '@',
-        dismiss: '=',
+        dismiss: '=', // true|false to display close icon
         removeColumn: '&'
       },
       controller: function($scope, feedAPI) {
@@ -34,7 +34,6 @@ angular.module('mapillaryApp')
         }
         promise.then(function(resp){
           $scope.data = resp.data.feed;
-          console.log($scope.data);
         });
       }
     };

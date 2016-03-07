@@ -1,15 +1,9 @@
 'use strict';
 
-/**
- * @ngdoc service
- * @name mapillaryApp.users
- * @description
- * # users
- * Service in the mapillaryApp.
- */
 angular.module('mapillaryApp')
   .service('users', function () {
 
+    //hardcoded list of username + picture
     var hardCodedUserData = [
       {
         username: 'gyllen',

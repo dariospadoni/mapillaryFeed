@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name mapillaryApp.directive:meblurrequested
- * @description
- * # meblurrequested
- */
 angular.module('mapillaryApp')
   .directive('meblurrequested', function () {
     return {

@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name mapillaryApp.directive:scroller
- * @description
- * # scroller
- */
 angular.module('mapillaryApp')
   .directive('scroller', function ($timeout) {
     return {

@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name mapillaryApp
- * @description
- * # mapillaryApp
- *
- * Main module of the application.
- */
 angular
   .module('mapillaryApp', [
     'ngRoute',
@@ -17,11 +9,14 @@ angular
   ])
 
   .constant('clientID', 'NVNQUnduTmlGOEY0SnVNSE9PVXZZZzpkMWIyZDU2MzYzNTJmM2M5')
+
   .constant('feedAPIURL', 'https://a.mapillary.com/v2/%s/feed?client_id=%s')
 
   .config(function ($routeProvider, $localStorageProvider) {
+
     $localStorageProvider.setKeyPrefix('mapillaryApp');
 
+    //only one route
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',

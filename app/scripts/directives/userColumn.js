@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc directive
- * @name mapillaryApp.directive:userColumn
- * @description
- * # userColumn
- */
 angular.module('mapillaryApp')
   .directive('userColumn', function (users) {
     return {
@@ -20,7 +14,9 @@ angular.module('mapillaryApp')
         $scope.users = users.loadUsers();
         $scope.columns = $localStorage.columns;
 
+        //checks if user has his own column already and sets properties accordingly
         function refreshUserColumns() {
+          //get current columns
           var userCols = _.map(_.filter($localStorage.columns, { type: 'userFeed'}), 'user');
           _.each($scope.users, function(user) {
             if (userCols.indexOf(user.username) !== -1) {

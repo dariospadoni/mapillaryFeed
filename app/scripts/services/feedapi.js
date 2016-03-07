@@ -1,12 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc service
- * @name mapillaryApp.feedAPI
- * @description
- * # feedAPI
- * Service in the mapillaryApp.
- */
 angular.module('mapillaryApp')
   .service('feedAPI', function ($http, feedAPIURL, clientID) {
 
