@@ -1,0 +1,106 @@
+.appContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ddd;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.columnContainer {
+  height: 100%;
+  padding: 6px 0 6px 6px;
+  /*overflow: visible;*/
+  white-space: nowrap; //ensure all columns are shown
+
+  .columnWrapper {
+    white-space: normal;
+    display: inline-block;
+    width: 310px;
+    height: 100%;
+    margin: 0 6px 0 0;
+    position: relative;
+
+    .column {
+      border: 2px solid #F5F5F5;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 100%;
+      background-color: #F5F5F5;
+      overflow: hidden;
+
+      a { text-decoration: none; cursor: pointer; }
+
+      header {
+        position: relative;
+        height: 50px;
+        background-color: #eee;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: normal;
+
+        .dismissBtn {
+          font-size: 16px;
+          position: absolute;
+          top: 2px;
+          right: 4px;
+        }
+        .sortButton {
+          font-size: 12px;
+          position: absolute;
+          bottom: 2px;
+          right: 4px;
+        }
+      }
+      .columnFilter {
+        padding: 10px 10px 0 10px;
+        margin-bottom: 0;
+      }
+
+      .columnContent {
+        position: absolute;
+        top: 50px; /* same as header height */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-x: hidden;
+        word-break: break-all;
+        word-wrap: break-word;
+        padding: 0px 10px;
+
+        .noDataFeed {
+          text-align: center;
+          margin-top: 200px;
+        }
+
+        .feedItem {
+          margin-top: 10px;
+          border-bottom: 2px solid #ccc;
+
+          blockquote {   padding: 10px; font-size:16px; }
+
+          img { max-width: 290px; }
+
+          .itemTime { font-size: smaller; text-align: left; color: #aaa}
+          .itemLocation { text-align: left; color: #aaa; padding: 5px 0 10px;}
+
+          &.meaddedimagetosequence { padding-bottom: 10px; }
+
+        }
+
+        ul.userList {
+          padding: 10px;
+
+          li { list-style-type: none; margin: 10px 0px; }
+
+          img { width: 40px; margin-right:10px; }
+        }
+      }
+    }
+  }
+}
+
+
+

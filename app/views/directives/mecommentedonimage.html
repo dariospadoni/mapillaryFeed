@@ -1,0 +1,13 @@
+<div class="mecommentedonimage feedItem">
+
+  <div class="itemTime">{{data.updated_at | timeAgo}}</div>
+
+  <b>{{data.user}}</b> <span>{{data.detail_description}}</span>
+
+  <div>
+    <img alt="Missing image" ng-src="{{data.image_url}}">
+  </div>
+
+  <blockquote>{{data.object_value}}</blockquote>
+
+</div>

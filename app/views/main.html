@@ -1,0 +1,59 @@
+
+<div class="appContainer">
+
+  <div class="columnContainer">
+
+      <div class="columnWrapper" ng-repeat="column in vm.$storage.columns">
+
+        <user-column ng-if="column.type==='users'"
+                     data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
+                     jqyoui-droppable="{index: {{$index}}}" jqyoui-draggable="{index: {{$index}}, insertInline: true, animate: false}"
+                     data-jqyoui-options="{revert: 'invalid'}"
+                     data-drop="true" ng-model="vm.$storage.columns"
+                     title="{{column.title}}"  on-select-user="vm.onSelectUser(user)"
+        ></user-column>
+
+        <feed-column ng-if="column.type==='globalActivity'"
+                     data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
+                     jqyoui-droppable="{index: {{$index}}}" jqyoui-draggable="{index: {{$index}}, insertInline: true, animate: false}"
+                     data-jqyoui-options="{revert: 'invalid'}"
+                     data-drop="true" ng-model="vm.$storage.columns"
+                     title="{{column.title}}" dismiss="false"
+        ></feed-column>
+
+        <feed-column ng-if="column.type==='userFeed'"
+                     data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
+                     jqyoui-droppable="{index: {{$index}}}" jqyoui-draggable="{index: {{$index}}, insertInline: true, animate: false}"
+                     data-jqyoui-options="{revert: 'invalid'}"
+                     data-drop="true" ng-model="vm.$storage.columns"
+                     title="{{column.title}}" user="{{column.user}}" dismiss="true" remove-column="vm.removeColumn(column.user)"
+        ></feed-column>
+
+      </div>
+
+<!--
+    <user-column data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
+                data-drop="true"
+                jqyoui-droppable=""
+                jqyoui-draggable="{animate:false}"
+                title="Users" users="vm.userNames" on-select-user="vm.onSelectUser(user)"
+    ></user-column>
+
+    <feed-column data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
+                 data-drop="true"
+                 jqyoui-droppable=""
+                 jqyoui-draggable="{animate:false}"
+                 title="Global activity" dismiss="false"
+    ></feed-column>
+
+    <feed-column data-drag="true" data-jqyoui-options="{revert: 'invalid'}" ng-repeat="userFeed in vm.$storage.userFeedColumns"
+                 data-drop="true"
+                 jqyoui-droppable=""
+                 jqyoui-draggable="{animate:false}"
+                 title="{{userFeed.title}}" user="{{userFeed.user}}" dismiss="true" remove-column="vm.removeColumn(user)"
+    ></feed-column>
+
+-->
+  </div>
+
+</div>

@@ -1,0 +1,31 @@
+<div class="column">
+
+  <header>
+    <div class="text-primary" ng-bind="title"></div>
+    <div class="dismissBtn" ng-show="dismiss === true">
+      <button type="button" ng-click="removeColumn({user: user})" class="close" ><span>&times;</span></button>
+    </div>
+    <div class="sortButton">
+      <a type="button" ng-click="sort()"> <i class="glyphicon glyphicon-sort-by-attributes"></i> </a>
+    </div>
+  </header>
+
+  <div class="columnContent" >
+
+    <div ng-show="data.length===0" class="noDataFeed">
+      <i class="fa fa-frown-o fa-3x"></i>
+      <h4>No activity in this feed</h4>
+    </div>
+
+    <div ng-repeat="entry in data">
+
+      <mecommentedonimage ng-if="entry.action=='mecommentedonimage'" data="entry"></mecommentedonimage>
+
+      <meaddedimagetosequence ng-if="entry.action=='meaddedimagetosequence'" data="entry"></meaddedimagetosequence>
+
+      <meblurrequested ng-if="entry.action=='meblurrequested'" data="entry"></meblurrequested>
+
+    </div>
+
+  </div>
+</div>

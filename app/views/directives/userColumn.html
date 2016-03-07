@@ -1,0 +1,24 @@
+<div class="column">
+
+  <header>
+    <div class="text-primary"  ng-bind="title"></div>
+  </header>
+
+  <div class="columnContent">
+
+    <div class="form-group columnFilter">
+      <input type="text" class="form-control" id="searchUserTxt" ng-model="searchUser" placeholder="Search user">
+    </div>
+
+    <ul class="userList">
+      <li ng-repeat="user in users | filter:searchUser">
+        <a ng-click="onSelectUser({user: user})">
+          <img class="img-rounded" ng-src="{{user.picture}}" alt="Avatar">
+          <span ng-bind="user.username"> </span>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+
+</div>
