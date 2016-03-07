@@ -12,7 +12,7 @@ angular.module('mapillaryApp')
     var vm = this;
 
     vm.$storage = $localStorage.$default({
-      columns: [{ type: 'users', title: 'Users'}, { type: 'globalActivity', title: 'Global activity'}]
+      columns: [{ type: 'users', title: 'Users', user: null}, { type: 'globalActivity', title: 'Global activity', user: null}]
     });
 
     vm.onSelectUser = function(user) {

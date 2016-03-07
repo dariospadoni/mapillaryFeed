@@ -16,8 +16,23 @@ angular.module('mapillaryApp')
         title: '@',
         onSelectUser: '&'
       },
-      controller: function($scope) {
+      controller: function($scope, $localStorage) {
         $scope.users = users.loadUsers();
+        $scope.columns = $localStorage.columns;
+
+        function refreshUserColumns() {
+          var userCols = _.map(_.filter($localStorage.columns, { type: 'userFeed'}), 'user');
+          _.each($scope.users, function(user) {
+            if (userCols.indexOf(user.username) !== -1) {
+              user.hasColumn = true;
+            } else {
+              user.hasColumn = false;
+            }
+          });
+        }
+        refreshUserColumns();
+
+        $scope.$watchCollection('columns', refreshUserColumns);
       }
     };
   });

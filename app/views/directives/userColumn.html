@@ -15,6 +15,12 @@
         <a ng-click="onSelectUser({user: user})">
           <img class="img-rounded" ng-src="{{user.picture}}" alt="Avatar">
           <span ng-bind="user.username"> </span>
+          <span class="pull-right" ng-show="user.hasColumn">
+            <i class="fa fa-external-link"></i>
+          </span>
+          <span class="pull-right" ng-hide="user.hasColumn">
+            <i class="fa fa-columns"></i>
+          </span>
         </a>
       </li>
     </ul>

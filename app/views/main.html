@@ -1,11 +1,11 @@
 
 <div class="appContainer">
 
-  <div class="columnContainer">
+  <div class="columnContainer" style="scroll: 200px;">
 
-      <div class="columnWrapper" ng-repeat="column in vm.$storage.columns">
+      <div class="columnWrapper" ng-repeat="column in vm.$storage.columns" >
 
-        <user-column ng-if="column.type==='users'"
+        <user-column ng-if="column.type==='users'" class="highlight"
                      data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
                      jqyoui-droppable="{index: {{$index}}}" jqyoui-draggable="{index: {{$index}}, insertInline: true, animate: false}"
                      data-jqyoui-options="{revert: 'invalid'}"
@@ -13,7 +13,7 @@
                      title="{{column.title}}"  on-select-user="vm.onSelectUser(user)"
         ></user-column>
 
-        <feed-column ng-if="column.type==='globalActivity'"
+        <feed-column ng-if="column.type==='globalActivity'" class="highlight"
                      data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
                      jqyoui-droppable="{index: {{$index}}}" jqyoui-draggable="{index: {{$index}}, insertInline: true, animate: false}"
                      data-jqyoui-options="{revert: 'invalid'}"
@@ -21,7 +21,7 @@
                      title="{{column.title}}" dismiss="false"
         ></feed-column>
 
-        <feed-column ng-if="column.type==='userFeed'"
+        <feed-column ng-if="column.type==='userFeed'" class="highlight" id="userColumn-{{column.user}}"
                      data-drag="true" data-jqyoui-options="{revert: 'invalid'}"
                      jqyoui-droppable="{index: {{$index}}}" jqyoui-draggable="{index: {{$index}}, insertInline: true, animate: false}"
                      data-jqyoui-options="{revert: 'invalid'}"

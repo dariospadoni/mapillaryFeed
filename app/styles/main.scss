@@ -1,3 +1,5 @@
+$columnBgColor: #F5F5F5;
+
 .appContainer {
   position: absolute;
   top: 0;
@@ -24,11 +26,11 @@
     position: relative;
 
     .column {
-      border: 2px solid #F5F5F5;
+      border: 2px solid $columnBgColor;
       border-radius: 5px;
       overflow: hidden;
       height: 100%;
-      background-color: #F5F5F5;
+      background-color: $columnBgColor;
       overflow: hidden;
 
       a { text-decoration: none; cursor: pointer; }
@@ -93,9 +95,9 @@
         ul.userList {
           padding: 10px;
 
-          li { list-style-type: none; margin: 10px 0px; }
+          li { list-style-type: none; padding: 10px 0px; border-bottom: 1px solid #ccc; }
 
-          img { width: 40px; margin-right:10px; }
+          img { margin-right:10px; height: 40px; }
         }
       }
     }
@@ -103,4 +105,17 @@
 }
 
 
+@-webkit-keyframes fade {
+  0% { border-color: #337ab7;}
+  100% { border-color: $columnBgColor;}
+}
 
+@keyframes fade {
+  0% { border-color: #337ab7;}
+  100% { border-color: $columnBgColor;}
+}
+
+.highlight {
+  -webkit-animation: fade 0.9s ease-in 1;
+  animation: fade 0.9s ease-in 1;
+}

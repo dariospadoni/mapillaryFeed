@@ -36,12 +36,12 @@ angular.module('mapillaryApp')
         picture: 'https://d4vkkeqw582u.cloudfront.net/12ef51d1e08e72a424059cbd/profile.png'
       },
       {
-        username: 'joostjakob',
-        picture: 'https://d4vkkeqw582u.cloudfront.net/666ddeac20f49ad6fda205d3/profile.png'
+        username: 'allen',
+        picture: 'https://d4vkkeqw582u.cloudfront.net/bea1abbd1ff4d557874ba5e8/profile.png'
       },
       {
-        username: 'yanapong',
-        picture: 'https://d4vkkeqw582u.cloudfront.net/8d2b2afd5d9cd4382a0150cc/profile.png'
+        username: 'adam2',
+        picture: 'http://www.mapillary.com/img/fake-avatar.png'
       },
        {
         username: 'z-yurets',
