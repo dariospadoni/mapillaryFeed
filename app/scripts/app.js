@@ -19,8 +19,7 @@ angular
   .constant('clientID', 'NVNQUnduTmlGOEY0SnVNSE9PVXZZZzpkMWIyZDU2MzYzNTJmM2M5')
   .constant('feedAPIURL', 'https://a.mapillary.com/v2/%s/feed?client_id=%s')
 
-  .config(function ($routeProvider,$locationProvider,  $localStorageProvider) {
-    $locationProvider.html5Mode(true);
+  .config(function ($routeProvider, $localStorageProvider) {
     $localStorageProvider.setKeyPrefix('mapillaryApp');
 
     $routeProvider
